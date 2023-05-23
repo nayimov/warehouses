@@ -1,0 +1,81 @@
+entity Warehouse {
+  id Long,
+  name String,
+  active Boolean
+}
+entity Supplier {
+  id Long,
+  firstName String,
+  lastName String,
+  active Boolean,
+  phoneNumber String
+}
+entity Input {
+  id Long,
+  date String,
+  warehouseId Long,
+  supplierId Long,
+  currencyId Long,
+  factureNumber String,
+  code String
+}
+entity Currency {
+  id Long,
+  name String,
+  active Boolean
+}
+entity Output {
+  id Long,
+  date String,
+  warehouseId Long,
+  currencyId Long,
+  factureNumber String,
+  code String,
+  clientId Long
+}
+entity Client {
+  id Long,
+  name String,
+  phoneNumber String
+}
+entity OutputProduct {
+  id Long,
+  productId Long,
+  amount Integer,
+  price BigDecimal,
+  outputId Long
+}
+entity Product {
+  id Long,
+  name String,
+  categoryId Long,
+  photoId String,
+  code String,
+  measurementId Long,
+  active Boolean
+}
+entity Measurement {
+  id Long,
+  name String,
+  active Boolean
+}
+entity Category {
+  id Long,
+  name String,
+  active Boolean
+  parentCategoryID Long
+}
+entity Attachment {
+  id String,
+  name String,
+  fileSize String,
+  contentType String
+}
+entity AttachmentContent {
+  id String,
+  byte String,
+  attachmentId String
+}
+relationship OneToOne{
+
+}
