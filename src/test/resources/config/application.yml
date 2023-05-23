@@ -69,12 +69,9 @@ jhipster:
       port: 5000
       queue-size: 512
   security:
-    authentication:
-      jwt:
-        # This token must be encoded using Base64 (you can type `echo 'secret-key'|base64` on your command line)
-        base64-secret: MGZmM2Y2YjRhYjRjYjkyZTBjMGE4ZjE5YzY4MzQ4YTM4YjYzMzdlODM3MTM5MTU1NDU2MDM3N2Q1N2ZmZWNkNWY0MTgzYzM5YjA3ZTg0ZWMxMTc2MWI2MzFlNGNjYTBhZDc3YTBmYWZhZTg0YmU5MjFhY2M0ZjJhOTYzNzA3NGU=
-        # Token is valid 24 hours
-        token-validity-in-seconds: 86400
+    remember-me:
+      # security key (this key should be unique for your application, and kept secret)
+      key: 51296fc0e60fe5276d5065def899fb1d65500fb16d7ff33a93199f3f4e6ce2394c4e5f3895c1f8150469641241c2239d25f0
 
 # ===================================================================
 # Application specific properties
